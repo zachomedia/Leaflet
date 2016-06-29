@@ -2905,6 +2905,7 @@ L.TileLayer = L.Class.extend({
 		var tile = L.DomUtil.create('img', 'leaflet-tile');
 		tile.style.width = tile.style.height = this._getTileSize() + 'px';
 		tile.galleryimg = 'no';
+		tile.alt = '';
 
 		tile.onselectstart = tile.onmousemove = L.Util.falseFn;
 
