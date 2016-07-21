@@ -8,7 +8,11 @@ L.Marker.include({
 			this._popup.setLatLng(this._latlng);
 			this._map.openPopup(this._popup);
 			if (this._popup.options.closeButton) {
+            var x = window.scrollX;
+            var y=  window.scrollY;
+            console.warn('Scroll position', x, y);
 				this._popup._closeButton.focus();
+            window.scrollTo(x, y);
 			}
 		}
 
